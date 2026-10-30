@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蔡尚軒的自我介紹：中國醫藥大學醫學系二年級學生，關注醫學、同理心、運動、守宮與人道救援。">
+    <meta name="theme-color" content="#f5f3ed">
+    <title>蔡尚軒｜以醫療為志，以同理為心</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --paper: #f5f3ed;
+            --ink: #1d302d;
+            --muted: #64736d;
+            --green: #355b50;
+            --lime: #d6e5a5;
+            --line: rgba(29, 48, 45, 0.16);
+            --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+            --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .shell {
+            width: min(1120px, calc(100% - 64px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 82px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--green);
+            color: white;
+            font-family: var(--serif);
+            font-size: 17px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            transition: color 160ms ease;
+        }
+
+        .nav a:hover,
+        .nav a:focus-visible {
+            color: var(--green);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 72px;
+            min-height: 610px;
+            padding: 82px 0 96px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 22px;
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+        }
+
+        .eyebrow::before {
+            width: 27px;
+            height: 1px;
+            background: currentColor;
+            content: "";
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            max-width: 650px;
+            margin-bottom: 25px;
+            font-family: var(--serif);
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            line-height: 1.28;
+        }
+
+        h1 span {
+            color: var(--green);
+        }
+
+        .hero-copy {
+            max-width: 570px;
+            margin-bottom: 34px;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .hero-name {
+            margin: -5px 0 15px;
+            color: var(--green);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .hero-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .hero-link span {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            transition: background 160ms ease, color 160ms ease;
+        }
+
+        .hero-link:hover span,
+        .hero-link:focus-visible span {
+            background: var(--green);
+            color: white;
+        }
+
+        .hero-art {
+            position: relative;
+            width: 100%;
+            max-width: 430px;
+            margin: 0 0 0 auto;
+            overflow: hidden;
+            border-radius: 48% 48% 6px 6px;
+            background: #e6e9dc;
+        }
+
+        .portrait-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .art-caption {
+            padding: 12px 4px 0;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .section {
+            padding: 100px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 52px;
+        }
+
+        .section-kicker {
+            margin: 8px 0 0;
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+        }
+
+        .section-heading h2 {
+            max-width: 700px;
+            margin-bottom: 0;
+            font-family: var(--serif);
+            font-size: clamp(30px, 4vw, 45px);
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .about-grid p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .about-grid p + p {
+            margin-top: 18px;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--line);
+        }
+
+        .principle {
+            min-height: 215px;
+            padding: 30px;
+            background: var(--paper);
+        }
+
+        .principle-number {
+            display: block;
+            margin-bottom: 25px;
+            color: var(--green);
+            font-family: var(--serif);
+            font-size: 14px;
+        }
+
+        .principle h3 {
+            margin-bottom: 9px;
+            font-family: var(--serif);
+            font-size: 21px;
+            font-weight: 500;
+        }
+
+        .principle p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .interest-card {
+            display: flex;
+            min-height: 240px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            border: 1px solid var(--line);
+        }
+
+        .interest-card:first-child {
+            background: #e6e9dc;
+        }
+
+        .interest-card:last-child {
+            background: #ede8dd;
+        }
+
+        .interest-icon {
+            color: var(--green);
+            font-family: var(--serif);
+            font-size: 31px;
+        }
+
+        .interest-card h3 {
+            margin-bottom: 6px;
+            font-family: var(--serif);
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .interest-card p {
+            max-width: 430px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .gecko-story {
+            display: grid;
+            grid-template-columns: 0.35fr 1.65fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 22px;
+            padding: 32px;
+            border: 1px solid var(--line);
+            background: #e6e9dc;
+        }
+
+        .gecko-mark {
+            display: grid;
+            width: 112px;
+            aspect-ratio: 1;
+            place-items: center;
+            justify-self: center;
+            border: 1px solid rgba(53, 91, 80, 0.32);
+            border-radius: 50%;
+            color: var(--green);
+            font-family: var(--serif);
+            font-size: 36px;
+        }
+
+        .gecko-story h3 {
+            margin-bottom: 8px;
+            font-family: var(--serif);
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .gecko-story p {
+            max-width: 700px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .future {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+            padding: 52px;
+            background: var(--green);
+            color: #f5f3ed;
+        }
+
+        .future .section-kicker {
+            color: var(--lime);
+        }
+
+        .future h2 {
+            margin: 0;
+            font-family: var(--serif);
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        .future-copy p {
+            margin: 0;
+            color: rgba(245, 243, 237, 0.78);
+            font-size: 15px;
+        }
+
+        .future-copy p + p {
+            margin-top: 16px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 28px 0;
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--green);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 760px) {
+            .shell {
+                width: min(100% - 40px, 560px);
+            }
+
+            .topbar {
+                min-height: 70px;
+            }
+
+            .nav {
+                gap: 15px;
+                font-size: 11px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 42px;
+                min-height: auto;
+                padding: 70px 0 74px;
+            }
+
+            .hero-art {
+                margin: 0 auto;
+            }
+
+            .section {
+                padding: 72px 0;
+            }
+
+            .section-heading,
+            .about-grid,
+            .future {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .section-heading {
+                margin-bottom: 32px;
+            }
+
+            .principles {
+                grid-template-columns: 1fr;
+            }
+
+            .principle {
+                min-height: 0;
+            }
+
+            .principle-number {
+                margin-bottom: 12px;
+            }
+
+            .interests {
+                grid-template-columns: 1fr;
+            }
+
+            .gecko-story {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 26px;
+            }
+
+            .gecko-mark {
+                width: 82px;
+                font-size: 28px;
+            }
+
+            .future {
+                gap: 24px;
+                padding: 32px 25px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .shell {
+                width: calc(100% - 32px);
+            }
+
+            .brand {
+                gap: 8px;
+                font-size: 11px;
+            }
+
+            .nav {
+                gap: 10px;
+                font-size: 10px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="shell topbar">
+        <a class="brand" href="#top" aria-label="回到首頁">
+            <span class="brand-mark" aria-hidden="true">醫</span>
+            <span>蔡尚軒｜自我介紹</span>
+        </a>
+        <nav class="nav" aria-label="主要導覽">
+            <a href="#about">關於我</a>
+            <a href="#values">相信的事</a>
+            <a href="#interests">日常熱愛</a>
+            <a href="#future">未來方向</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="shell hero" aria-labelledby="hero-title">
+            <div>
+                <p class="eyebrow">MEDICINE · HUMANITY · ACTION</p>
+                <p class="hero-name">蔡尚軒</p>
+                <h1 id="hero-title">以醫療為志，<br><span>以同理為心。</span></h1>
+                <p class="hero-copy">
+                    我是中國醫藥大學醫學系二年級學生蔡尚軒。走在學習醫學的路上，
+                    我期待成為一位兼具專業、關懷與行動力的醫者。
+                </p>
+                <a class="hero-link" href="#about">
+                    認識我的故事
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+            <figure class="hero-art">
+                <img class="portrait-image" src="website.github/1766604950893.jpg" alt="蔡尚軒手拿抹茶冰淇淋的生活照">
+                <figcaption class="art-caption">在專業與溫度之間，持續前行</figcaption>
+            </figure>
+        </section>
+
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="shell">
+                <div class="section-heading">
+                    <p class="section-kicker">01 / ABOUT ME</p>
+                    <h2 id="about-title">學習成為醫者，<br>也學習理解每一個人。</h2>
+                </div>
+                <div class="about-grid">
+                    <p>
+                        醫學訓練讓我看見科學與專業的力量；而我也相信，
+                        好的照護不只來自知識，更來自願意傾聽、理解與陪伴的心。
+                        我對外科學抱持濃厚興趣，期許自己持續累積能力，
+                        面對每一次學習與挑戰。
+                    </p>
+                    <p>
+                        《心靈病房》、《親愛的醫生》與《我想念我自己》等作品，
+                        提醒我在臨床實踐中以患者為中心，尊重生命尊嚴，
+                        並以同理而不評判的態度照護病患。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="values" aria-labelledby="values-title">
+            <div class="shell">
+                <div class="section-heading">
+                    <p class="section-kicker">02 / WHAT I BELIEVE</p>
+                    <h2 id="values-title">我希望帶進醫療現場的，<br>不只有專業。</h2>
+                </div>
+                <div class="principles">
+                    <article class="principle">
+                        <span class="principle-number">01</span>
+                        <h3>以患者為中心</h3>
+                        <p>先理解眼前的人，再思考如何提供適切的照護。</p>
+                    </article>
+                    <article class="principle">
+                        <span class="principle-number">02</span>
+                        <h3>尊重生命尊嚴</h3>
+                        <p>珍視每個人的選擇、處境與生命故事。</p>
+                    </article>
+                    <article class="principle">
+                        <span class="principle-number">03</span>
+                        <h3>同理而不評判</h3>
+                        <p>用開放的心傾聽，讓關懷成為照護的一部分。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="interests" aria-labelledby="interests-title">
+            <div class="shell">
+                <div class="section-heading">
+                    <p class="section-kicker">03 / BEYOND THE CLASSROOM</p>
+                    <h2 id="interests-title">在球場、音樂與守宮陪伴中，<br>找到生活的節奏。</h2>
+                </div>
+                <div class="interests">
+                    <article class="interest-card">
+                        <span class="interest-icon" aria-hidden="true">↗</span>
+                        <div>
+                            <h3>網球與羽球</h3>
+                            <p>
+                                是醫學系網球隊的核心成員，也參與籌辦隊上活動；
+                                平時喜歡打單打羽球，也鑽研球拍磅數、線材配置
+                                （如 Yonex Astrox 系列搭配 VBS-66 Nano）與擊球力學。
+                            </p>
+                        </div>
+                    </article>
+                    <article class="interest-card">
+                        <span class="interest-icon" aria-hidden="true">♪</span>
+                        <div>
+                            <h3>音樂與平衡</h3>
+                            <p>
+                                課業與研究之外，也透過音樂為生活留白，
+                                在不同的節奏裡整理思緒、重新出發。
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <article class="gecko-story">
+                    <span class="gecko-mark" aria-hidden="true">慢</span>
+                    <div>
+                        <h3>一隻小守宮，提醒我慢下來</h3>
+                        <p>
+                            我也養了一隻小守宮。看牠在飼養箱裡緩緩爬行、專注地盯著獵物，總能讓我放鬆。
+                            照顧牠培養了我的耐心與觀察力，也提醒我在追求效率與精準時，
+                            別忘了放慢腳步，欣賞生活中的單純與寧靜。
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="future" aria-labelledby="future-title">
+            <div class="shell">
+                <div class="future">
+                    <div>
+                        <p class="section-kicker">04 / LOOKING AHEAD</p>
+                        <h2 id="future-title">把所學帶到<br>最需要的地方。</h2>
+                    </div>
+                    <div class="future-copy">
+                        <p>
+                            長遠而言，我希望能加入無國界醫生（Médecins Sans Frontières），
+                            參與人道救援，將醫療專業與溫暖的關懷帶到世界最需要的角落。
+                        </p>
+                        <p>
+                            這是仍在前行中的志向。我會以每一天的學習與實踐，
+                            一步一步靠近它。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="shell footer">
+        <p>以醫療為志，以同理為心。</p>
+        <p>中國醫藥大學醫學系 · 二年級</p>
+    </footer>
+</body>
+</html>
